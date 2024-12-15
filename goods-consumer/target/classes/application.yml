@@ -1,0 +1,21 @@
+server:
+  port: 8896
+spring:
+  application:
+    name: goods-consumer
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://root:123456@localhost:8500/eureka/
+    instance:
+      hostname: localhost
+feign:
+  hystrix:
+    enabled: true
+thymeleaf:
+  cache: false
+  prefix: classpath:/template/
+  suffix: .html
+  encoding: UTF-8
